@@ -1,0 +1,55 @@
+body{
+    text-align: center;
+}
+
+table{
+    margin: auto;
+    width: 80%;
+    font-size: 1.5em;
+}
+
+td{
+    border-bottom: 1px solid blue;
+}
+
+tr.online-topic td {
+    color: #aaa;
+    background-color: #f2f2f2;
+}
+
+
+#addTopicArea {
+    margin: 24px auto;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#newTopicInput {
+    padding: 8px 14px;
+    font-size: 1.1em;
+    border: 2px solid #4a90d9;
+    border-radius: 6px;
+    width: 280px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#newTopicInput:focus {
+    border-color: #1a5fa8;
+}
+
+#addTopicBtn {
+    padding: 8px 20px;
+    font-size: 1.1em;
+    background-color: #4a90d9;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#addTopicBtn:hover {
+    background-color: #1a5fa8;
+}

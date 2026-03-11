@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 主容器（用 body 直排） */
+h1, input, ul {
+    /* 讓元素垂直排列 */
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    margin-bottom: 25px;
+    min-height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bounceIn 0.6s ease;
+    transition: transform 0.3s ease;
+}
+
+h1:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+@keyframes bounceIn {
+    0%   { transform: scale(0.3); opacity: 0; }
+    50%  { transform: scale(1.1); }
+    70%  { transform: scale(0.9); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+input[type="button"] {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #f5af19, #f12711);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(241, 39, 17, 0.4);
+    transition: all 0.3s ease;
+    letter-spacing: 2px;
+    position: relative;
+    overflow: hidden;
+}
+
+input[type="button"]::before {
+    content: '🍽️ ';
+}
+
+input[type="button"]:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 12px 35px rgba(241, 39, 17, 0.5);
+}
+
+input[type="button"]:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: 0 4px 15px rgba(241, 39, 17, 0.3);
+}
+
+ul {
+    list-style: none;
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    max-width: 500px;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+li:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-3px) scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+li:nth-child(1)::before { content: '🍜 '; }
+li:nth-child(2)::before { content: '🥩 '; }
+li:nth-child(3)::before { content: '🍲 '; }
+li:nth-child(4)::before { content: '🍣 '; }
+
+.container {
+    text-align: center;
+    padding: 50px 40px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    max-width: 520px;
+    width: 90%;
+}
